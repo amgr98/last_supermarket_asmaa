@@ -1,4 +1,5 @@
-﻿using System;
+﻿using last_supermarket_asmaa.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace last_supermarket_asmaa
 {
     public partial class Form3 : Form
     {
+        PointOfSalyEntities db = new PointOfSalyEntities();
         public Form3()
         {
             InitializeComponent();
@@ -30,11 +32,16 @@ namespace last_supermarket_asmaa
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-
+            USER user = new USER();
+            user.UserName = txtUsername.Text;
+            user.Password = txtPassword.Text;
+            db.USERS.Add(user);
+            db.SaveChanges();
+            MessageBox.Show("Your password is :"+txtPassword.Text +"\n"+"your Username is :"+txtUsername.Text+"\n"+"please do not forget them!");
         }
 
         private void btnBack_Click(object sender, EventArgs e)
-        {
+        {;
             this.Hide();
 
             frm.ShowDialog();
