@@ -31,12 +31,12 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblPasword = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSignin = new System.Windows.Forms.Button();
             this.btnX = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,6 +54,7 @@
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // lblUsername
             // 
@@ -83,41 +84,29 @@
             this.lblPasword.TabIndex = 2;
             this.lblPasword.Text = "Pasword";
             // 
-            // textBox1
+            // txtUsername
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(606, 188);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(192, 46);
-            this.textBox1.TabIndex = 3;
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(606, 188);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(192, 46);
+            this.txtUsername.TabIndex = 3;
             // 
-            // textBox2
+            // txtPassword
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(606, 261);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(192, 46);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::last_supermarket_asmaa.Properties.Resources.GettyImages_871227828;
-            this.pictureBox1.Location = new System.Drawing.Point(-18, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(464, 754);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(606, 261);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(192, 46);
+            this.txtPassword.TabIndex = 4;
+            this.txtPassword.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label1
             // 
@@ -164,6 +153,19 @@
             this.btnX.UseVisualStyleBackColor = false;
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::last_supermarket_asmaa.Properties.Resources.GettyImages_871227828;
+            this.pictureBox1.Location = new System.Drawing.Point(-18, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(464, 754);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -174,8 +176,8 @@
             this.Controls.Add(this.btnSignin);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.lblPasword);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.btnLogin);
@@ -194,8 +196,8 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblPasword;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSignin;
