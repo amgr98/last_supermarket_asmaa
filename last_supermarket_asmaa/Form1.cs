@@ -64,5 +64,11 @@ namespace last_supermarket_asmaa
                 }
             }
         }
+
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            Form3 frm = new Form3();
+            frm.ShowDialog();
+        }
     }
     }

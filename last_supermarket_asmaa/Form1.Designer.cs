@@ -34,7 +34,7 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSignin = new System.Windows.Forms.Button();
+            this.btnSignUp = new System.Windows.Forms.Button();
             this.btnX = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -122,20 +122,21 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Gaint Supermarket";
             // 
-            // btnSignin
+            // btnSignUp
             // 
-            this.btnSignin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnSignUp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSignin.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btnSignin.Font = new System.Drawing.Font("Microsoft Tai Le", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignin.ForeColor = System.Drawing.Color.Cornsilk;
-            this.btnSignin.Location = new System.Drawing.Point(168, 405);
-            this.btnSignin.Name = "btnSignin";
-            this.btnSignin.Size = new System.Drawing.Size(120, 48);
-            this.btnSignin.TabIndex = 7;
-            this.btnSignin.Text = "Signin";
-            this.btnSignin.UseVisualStyleBackColor = false;
+            this.btnSignUp.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnSignUp.Font = new System.Drawing.Font("Microsoft Tai Le", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignUp.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnSignUp.Location = new System.Drawing.Point(168, 405);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Size = new System.Drawing.Size(120, 48);
+            this.btnSignUp.TabIndex = 7;
+            this.btnSignUp.Text = "Sign Up";
+            this.btnSignUp.UseVisualStyleBackColor = false;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // btnX
             // 
@@ -173,7 +174,7 @@
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(821, 491);
             this.Controls.Add(this.btnX);
-            this.Controls.Add(this.btnSignin);
+            this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtPassword);
@@ -200,7 +201,7 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSignin;
+        private System.Windows.Forms.Button btnSignUp;
         private System.Windows.Forms.Button btnX;
     }
 }
