@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +19,8 @@ namespace last_supermarket_asmaa
         public Form3()
         {
             InitializeComponent();
-         MessageBox.Show  ( Environment.CurrentDirectory);
+            // MessageBox.Show  ( Environment.CurrentDirectory);
+
         }
         Form1 frm = new Form1();
 
@@ -34,13 +36,25 @@ namespace last_supermarket_asmaa
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
+            /* db.USERS.Add(new user
+             {
+                 UserName = txtUsername.Text,
+                 Password = txtPassword.Text,
+                 //Image=imagepath
+             });
+
+             }*/
+
             USER user = new USER();
             user.UserName = txtUsername.Text;
             user.Password = txtPassword.Text;
-           // user.Imge = imagepath;
+            // user.Imge = imagepath;
             db.USERS.Add(user);
             db.SaveChanges();
+            //  File.Copy(imagepath, Environment.CurrentDirectory + "\\a.jpg");
             MessageBox.Show("Your password is :" + txtPassword.Text + "\n" + "your Username is :" + txtUsername.Text + "\n" + "please do not forget them!");
+
+
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -51,15 +65,26 @@ namespace last_supermarket_asmaa
             frm.ShowDialog();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void Form3_Load(object sender, EventArgs e)
         {
-            OpenFileDialog dialog = new OpenFileDialog();
-            if (dialog.ShowDialog() == DialogResult.OK) 
-            {
-             //   imagepath=dialog.FileName;
-                pictureBox1.ImageLocation = dialog.FileName;
-            }
+
         }
+
+
+
+        // private void pictureBox1_Click(object sender, EventArgs e)
+        // {
+        //  OpenFileDialog dialog = new OpenFileDialog();
+        //  if (dialog.ShowDialog() == DialogResult.OK) 
+        //   {
+        //   imagepath=dialog.FileName;
+        //   pictureBox1.ImageLocation = dialog.FileName;
+
+
+        //}
+
     }
 }
+    
+
 

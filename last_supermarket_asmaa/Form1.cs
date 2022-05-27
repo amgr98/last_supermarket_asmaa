@@ -1,4 +1,5 @@
-﻿using System;
+﻿using last_supermarket_asmaa.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,9 @@ namespace last_supermarket_asmaa
 {
     public partial class Form1 : Form
     {
-         private List<User> _users = new List<User>();
+        PointOfSalyEntities db = new PointOfSalyEntities();
+
+        private List<User> _users = new List<User>();
         public Form1()
         {
             InitializeComponent();
@@ -55,9 +58,17 @@ namespace last_supermarket_asmaa
                     frm.usernameright = txtUsername.Text;
                     frm.ShowDialog();
                 }
+              
+
+                    if (db.USERS.Where(x => x.UserName == username).Any() && db.USERS.Where(x => x.Password == password).Any())
+                    {
+                        Form2 frm = new Form2();
+                        frm.usernameright = txtUsername.Text;
+                        frm.ShowDialog();
+                    }
                 else
                 {
-                    if (user.UserName != username && user.Password != password)
+
                     {
                         MessageBox.Show("Try Agin");
                     }
@@ -69,6 +80,11 @@ namespace last_supermarket_asmaa
         {
             Form3 frm = new Form3();
             frm.ShowDialog();
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
     }
