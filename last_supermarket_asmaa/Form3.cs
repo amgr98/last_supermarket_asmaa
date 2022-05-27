@@ -14,9 +14,11 @@ namespace last_supermarket_asmaa
     public partial class Form3 : Form
     {
         PointOfSalyEntities db = new PointOfSalyEntities();
+        String imagepath;
         public Form3()
         {
             InitializeComponent();
+         MessageBox.Show  ( Environment.CurrentDirectory);
         }
         Form1 frm = new Form1();
 
@@ -35,16 +37,29 @@ namespace last_supermarket_asmaa
             USER user = new USER();
             user.UserName = txtUsername.Text;
             user.Password = txtPassword.Text;
+           // user.Imge = imagepath;
             db.USERS.Add(user);
             db.SaveChanges();
-            MessageBox.Show("Your password is :"+txtPassword.Text +"\n"+"your Username is :"+txtUsername.Text+"\n"+"please do not forget them!");
+            MessageBox.Show("Your password is :" + txtPassword.Text + "\n" + "your Username is :" + txtUsername.Text + "\n" + "please do not forget them!");
         }
 
         private void btnBack_Click(object sender, EventArgs e)
-        {;
+        {
+            ;
             this.Hide();
 
             frm.ShowDialog();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            if (dialog.ShowDialog() == DialogResult.OK) 
+            {
+             //   imagepath=dialog.FileName;
+                pictureBox1.ImageLocation = dialog.FileName;
+            }
+        }
     }
 }
+

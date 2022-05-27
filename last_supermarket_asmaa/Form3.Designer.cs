@@ -118,11 +118,15 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.DarkGray;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(228, 295);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(162, 213);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblImge
             // 
@@ -167,7 +171,7 @@
             this.lblADD.ForeColor = System.Drawing.Color.Cornsilk;
             this.lblADD.Location = new System.Drawing.Point(185, 49);
             this.lblADD.Name = "lblADD";
-            this.lblADD.Size = new System.Drawing.Size(247, 44);
+            this.lblADD.Size = new System.Drawing.Size(240, 43);
             this.lblADD.TabIndex = 18;
             this.lblADD.Text = "Add New User";
             // 
