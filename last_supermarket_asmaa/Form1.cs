@@ -58,7 +58,7 @@ namespace last_supermarket_asmaa
                     frm.usernameright = txtUsername.Text;
                     frm.ShowDialog();
                 }
-              
+              //طريقة اخرى ل تسجيل الدخول عن طريق حفظ المعلومات في  الداتا بيس علما بأن الطريقتان تعملان معا في نفس الوقت
 
                     if (db.USERS.Where(x => x.UserName == username).Any() && db.USERS.Where(x => x.Password == password).Any())
                     {
