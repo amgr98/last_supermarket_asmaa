@@ -14,6 +14,7 @@ namespace last_supermarket_asmaa
     public partial class Form2 : Form
     {
         PointOfSalyEntities db = new PointOfSalyEntities();
+        prodcuct model=new prodcuct();
         public string usernameright { get; set; }
         public Form2()
         {
@@ -37,7 +38,10 @@ namespace last_supermarket_asmaa
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            Cler();
+            pdgv();
             label1.Text = "welcome : " + usernameright;
+          
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -69,24 +73,58 @@ namespace last_supermarket_asmaa
         {
             if (txtBarcode.Text == "" || txtPrice.Text == "" || txtProuductName.Text == "")
             {
+                Cler();
+
                 MessageBox.Show("Please complete the information");
             }
             else
             {
-                prodcuct x = new prodcuct();
-                x.Name = txtProuductName.Text;
-                x.Price= decimal.Parse(txtPrice.Text);
-                x.Code=txtBarcode.Text;
-                x.Notes=txtNots.Text;
-                x.Quantity=int.Parse(txtQuantity.Text);
-                db.prodcucts.Add(x);
+                 
+                model.Name = txtProuductName.Text;
+                model.Price= decimal.Parse(txtPrice.Text);
+                model.Code=txtBarcode.Text;
+                model.Notes=txtNots.Text;
+                model.Quantity=int.Parse(txtQuantity.Text);
+
+
+
+                    db.prodcucts.Add(model);
                 db.SaveChanges();
+                
+                Cler();
+                pdgv();
 
                 MessageBox.Show("The product has been saved correctly");
 
 
 
             }
+        }
+        void pdgv()
+        {
+            
+            
+                dataGridView1.DataSource = db.prodcucts.ToList<prodcuct>();
+            
+
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Cler();
+        }
+        void Cler()
+        {
+            txtBarcode.Text = txtBarcode.Text = txtNots.Text = txtProuductName.Text = txtQuantity.Text =txtPrice.Text ="";
+            btnSave.Text = "save";
+            btnDelet.Enabled=false;
+            model.id=0;
         }
     }
 }

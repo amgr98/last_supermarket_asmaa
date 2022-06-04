@@ -46,6 +46,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnabdet = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnDelet = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -54,11 +59,11 @@
             this.label1.BackColor = System.Drawing.Color.DarkOrange;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label1.Location = new System.Drawing.Point(34, 412);
+            this.label1.Location = new System.Drawing.Point(22, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 29);
+            this.label1.Size = new System.Drawing.Size(20, 29);
             this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.label1.Text = " ";
             // 
             // btnX
             // 
@@ -70,7 +75,7 @@
             this.btnX.ForeColor = System.Drawing.Color.Cornsilk;
             this.btnX.Location = new System.Drawing.Point(747, 19);
             this.btnX.Name = "btnX";
-            this.btnX.Size = new System.Drawing.Size(41, 43);
+            this.btnX.Size = new System.Drawing.Size(41, 44);
             this.btnX.TabIndex = 9;
             this.btnX.Text = "X";
             this.btnX.UseVisualStyleBackColor = false;
@@ -88,7 +93,7 @@
             this.btnBack.ForeColor = System.Drawing.Color.Cornsilk;
             this.btnBack.Location = new System.Drawing.Point(700, 19);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(41, 43);
+            this.btnBack.Size = new System.Drawing.Size(41, 44);
             this.btnBack.TabIndex = 10;
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -142,7 +147,7 @@
             this.btnSave.ForeColor = System.Drawing.Color.Cornsilk;
             this.btnSave.Location = new System.Drawing.Point(389, 301);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(120, 48);
+            this.btnSave.Size = new System.Drawing.Size(120, 50);
             this.btnSave.TabIndex = 11;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -154,12 +159,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.DarkGray;
-            this.label2.Font = new System.Drawing.Font("Segoe Print", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.BackColor = System.Drawing.Color.DarkMagenta;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Cornsilk;
             this.label2.Location = new System.Drawing.Point(244, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(309, 54);
+            this.label2.Size = new System.Drawing.Size(255, 35);
             this.label2.TabIndex = 16;
             this.label2.Text = "Add New Products";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -198,7 +203,7 @@
             this.txtNots.Location = new System.Drawing.Point(558, 177);
             this.txtNots.Multiline = true;
             this.txtNots.Name = "txtNots";
-            this.txtNots.Size = new System.Drawing.Size(197, 99);
+            this.txtNots.Size = new System.Drawing.Size(197, 93);
             this.txtNots.TabIndex = 20;
             // 
             // lblNotes
@@ -250,7 +255,7 @@
             this.label3.ForeColor = System.Drawing.Color.Red;
             this.label3.Location = new System.Drawing.Point(121, 109);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 37);
+            this.label3.Size = new System.Drawing.Size(28, 35);
             this.label3.TabIndex = 25;
             this.label3.Text = "*";
             // 
@@ -265,7 +270,7 @@
             this.label4.ForeColor = System.Drawing.Color.Red;
             this.label4.Location = new System.Drawing.Point(166, 164);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 37);
+            this.label4.Size = new System.Drawing.Size(28, 35);
             this.label4.TabIndex = 26;
             this.label4.Text = "*";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -295,16 +300,77 @@
             this.label6.ForeColor = System.Drawing.Color.Red;
             this.label6.Location = new System.Drawing.Point(92, 232);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(30, 37);
+            this.label6.Size = new System.Drawing.Size(28, 35);
             this.label6.TabIndex = 28;
             this.label6.Text = "*";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 367);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(776, 257);
+            this.dataGridView1.TabIndex = 29;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // btnabdet
+            // 
+            this.btnabdet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnabdet.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnabdet.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnabdet.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnabdet.Location = new System.Drawing.Point(378, 655);
+            this.btnabdet.Name = "btnabdet";
+            this.btnabdet.Size = new System.Drawing.Size(120, 50);
+            this.btnabdet.TabIndex = 30;
+            this.btnabdet.Text = "Updet";
+            this.btnabdet.UseVisualStyleBackColor = false;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancel.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnCancel.Location = new System.Drawing.Point(513, 655);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(120, 50);
+            this.btnCancel.TabIndex = 31;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnDelet
+            // 
+            this.btnDelet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelet.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnDelet.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelet.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnDelet.Location = new System.Drawing.Point(239, 655);
+            this.btnDelet.Name = "btnDelet";
+            this.btnDelet.Size = new System.Drawing.Size(120, 50);
+            this.btnDelet.TabIndex = 32;
+            this.btnDelet.Text = "Delet";
+            this.btnDelet.UseVisualStyleBackColor = false;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 757);
+            this.Controls.Add(this.btnDelet);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnabdet);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -327,6 +393,7 @@
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,5 +419,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnabdet;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnDelet;
     }
 }

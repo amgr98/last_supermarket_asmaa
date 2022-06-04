@@ -20,6 +20,6 @@ namespace last_supermarket_asmaa.Data
         public Nullable<decimal> Price { get; set; }
         public Nullable<int> Quantity { get; set; }
         public string Notes { get; set; }
-        public string Image { get; set; }
+        
     }
 }
